@@ -1,22 +1,22 @@
 SensorML Editor (*SMLE*) Manual
 ===============================
 
-This document provides helpful information on how to use the **SensorML Editor (*SMLE*\)** Web application provided by **52&deg;North**. It uses a tutorial-based manner to guide you through the basic functionalities. This documentation is based on the SMLE version from March 2017. The most current development of *SMLE* is available from the [official GitHub page of *SMLE*](https://github.com/52North/SMLE).
+This document provides helpful information on how to use the **SensorML Editor (*SMLE*\)** Web application provided by **52&deg;North**. It uses a tutorial-based manner to guide you through the basic functionalities. This documentation is based on the SMLE version from March 2017. The most current development of **SMLE** is available from the [official GitHub page of **SMLE**](https://github.com/52North/SMLE).
 
 Basic Visual Interface of *SMLE*
 --------------------------------
 
-This section provides general information about the Web application **SMLE**. As the full name indicates, the SensorML Editor is a Web application allowing users to manage SensorML documents of a preconfigured *Sensor Observation Service (SOS)*. This *SOS* instance is configured during installation by an IT-expert and is currently not changeable at runtime. *SMLE* provides a visual interface for various tasks such as *viewing/editing/deleting* existing SensorML documents or *creating* new sensor descriptions. Without logging in, the application only allows to view existing sensor descriptions. Only after a **successful login** users may perform the administrative tasks *create*, *edit*/*update* and *delete*. To log in users require an account on the [FixO3 Platform](http://www.fixo3.eu/). **FixO3** is an acronym for "Fixed-Point Open Ocean Observatories", a project funded by the European Union, where 52&deg;North participated. **SMLE** was mainly developed within the context of the **FixO3** project.
+This section provides general information about the Web application **SMLE**. As the full name indicates, the SensorML Editor is a Web application allowing users to manage SensorML documents of a preconfigured **Sensor Observation Service (SOS)**. This **SOS** instance is configured during installation by an IT-expert and is currently not changeable at runtime. **SMLE** provides a visual interface for various tasks such as *viewing/editing/deleting* existing SensorML documents or *creating* new sensor descriptions. Without logging in, the application only allows to view existing sensor descriptions. Only after a **successful login** users may perform the administrative tasks *create*, *edit*/*update* and *delete*. To log in users require an account on the [FixO3 Platform](http://www.fixo3.eu/). **FixO3** is an acronym for "Fixed-Point Open Ocean Observatories", a project funded by the European Union, where 52&deg;North participated. **SMLE** was mainly developed within the context of the **FixO3** project.
 
-As an exemplar instance of *SMLE*, this guide uses the application from http://pilot.52north.org:3000/#/. The landing page greets you as shown in the subsequent figure.
+As an exemplar instance of **SMLE**, this guide uses the application from http://pilot.52north.org:3000/#/. The landing page greets you as shown in the subsequent figure.
 
 ![Landing Page of SMLE](images/landing_page.png)*Landing Page of SMLE*
 
-At the top of the application, a bar shows the main project partners. A click on any of the labels will navigate the browser to the associated homepage of the respective partner. The dark grey navigation bar below contains the available functionalities/views of *SMLE*, which are accessible by clicking the corresponding button. Via **New** and **Create from Template**, new SensorML documents can be created. When accessing the application, **SMLE** automatically opens the **New** view. Using **Edit/View**, existing sensor descriptions can be viewed and edited. However, as mentioned above, the administrative functionalities can only be performed once logged in. In consequence, as a first step, you should log in via the **login** button located at the right of the navigation bar. This will open a popup window showing the [FixO3 login page](http://www.fixo3.eu/login/) where you may enter your **FixO3** credentials. **Note that you have to enable popups within your browser!**
+At the top of the application, a bar shows the main project partners. A click on any of the labels will navigate the browser to the associated homepage of the respective partner. The dark grey navigation bar below contains the available functionalities/views of **SMLE**, which are accessible by clicking the corresponding button. Via **New** and **Create from Template**, new SensorML documents can be created. When accessing the application, **SMLE** automatically opens the **New** view. Using **Edit/View**, existing sensor descriptions can be viewed and edited. However, as mentioned above, the administrative functionalities can only be performed once logged in. In consequence, as a first step, you should log in via the **login** button located at the right of the navigation bar. This will open a popup window showing the [FixO3 login page](http://www.fixo3.eu/login/) where you may enter your **FixO3** credentials. **Note that you have to enable popups within your browser!**
 
 ![Login Popup for FixO3 Credentials](images/login_fixo3.png)*Login Popup for FixO3 Credentials*
 
-After signing for the first time, you will have to authorize *SMLE*, allowing the application to access your **FixO3** account. E.g., the following figure shows the screen, where user "c.danowski@52north.org" may grant permission to **SMLE**:
+After signing for the first time, you will have to authorize **SMLE**, allowing the application to access your **FixO3** account. E.g., the following figure shows the screen, where user "c.danowski@52north.org" may grant permission to **SMLE**:
 
 ![Login - Grant Permission to SMLE](images/login_authorize_smle.png)*Login - Grant Permission to SMLE*
 
@@ -25,9 +25,9 @@ This step is not required for subsequent logins. When logged in, the **login** b
 Modifiable Items and Restrictions
 ---------------------------------
 
-When logged in, you are able to create, edit or delete Sensor descriptions. However, you are only allowed to modify content that you have previously created by yourself. To be more precise, you are allowed to *view* any available sensor description from any user. Also you can *create* arbitrary new SensorML documents, providing a new unique identifier. But you are not permitted to *update* or *delete* sensor descriptions from another user. Only your own documents that are linked to your account are open for modification. Due to this restriction, the application prevents users to manipulate content without permission.
+When logged in, you are able to *create*, *edit* or *delete* Sensor descriptions. ***However, you are only allowed to modify content that you have previously created by yourself!*** To be more precise, you are allowed to *view* any available sensor description from any user. Also you can *create* arbitrary new SensorML documents, providing a new unique identifier. But you are not permitted to *update* or *delete* sensor descriptions from another user. Only your own documents that are linked to your account are open for modification. Due to this restriction, the application prevents users to manipulate content without proper permission.
 
-Although not being allowed to modify documents of other persons, the visual interface lets you edit an existing sensor description and even click on the **Publish** and **Update** buttons (see section [Edit your own SensorML Descriptions](#edit-your-own-sensorml-descriptions) for more detailed workflow). Only then *SMLE* will notice that you tried to change the description of another user and fail. This is due to technical reasons. As the underlying SOS instance stores, which sensor description was created by which user, *SMLE* builds and executes a SOS *UpdateSensorDescription* request. If the logged in user does not have the permission to update that specific sensor description, the SOS operation fails. As an enhancement, future version of *SMLE* might inspect earlier, whether users have permission to edit a certain document and inform them via suitable means (e.g. hide the edit button on a missing permission).
+Although not being allowed to modify documents of other persons, the visual interface lets you edit an existing sensor description and even click on the **Publish** and **Update** buttons (see section [Edit your own SensorML Descriptions](#edit-your-own-sensorml-descriptions) for more detailed workflow). Only then **SMLE** will notice that you tried to change the description of another user and fail. This is due to technical reasons. As the underlying **SOS** instance stores, which sensor description was created by which user, **SMLE** builds and executes a **SOS** *UpdateSensorDescription* request. If the logged in user does not have the permission to update that specific sensor description, the **SOS** operation fails. As an enhancement, future version of **SMLE** might inspect earlier, whether users have permission to edit a certain document and inform them via suitable means (e.g. hide the edit button on a missing permission).
 
 Create SensorML Document from Template
 --------------------------------------
@@ -70,7 +70,7 @@ The process of adding new information uses a nested window design to resemble th
 
 ![Create from Template - Edit Elements - Click on Responsible party](images/add_information/click_responsibleParty.png)
 
-1.	Fill the form fields of the **Responsible party** element and, in addition click on **Create Contact Info**, which adds a new item called *Contact Info*. Whenever you edit any form field, the corresponding content is immediately updated with the new value. Switching back to previous hierarchy level (in this case *Physical System* or *Contact List*) is allowed at any time. All changed values have been recognized and applied by *SMLE*.
+1.	Fill the form fields of the **Responsible party** element and, in addition click on **Create Contact Info**, which adds a new item called *Contact Info*. Whenever you edit any form field, the corresponding content is immediately updated with the new value. Switching back to previous hierarchy level (in this case *Physical System* or *Contact List*) is allowed at any time. All changed values have been recognized and applied by **SMLE**.
 
 ![Create from Template - Edit Elements - Enter values for responsible party](images/add_information/enter_responsibleParty_values.png)
 
@@ -78,7 +78,7 @@ The process of adding new information uses a nested window design to resemble th
 
 ![Create from Template - Edit Elements - Click on Contact info](images/add_information/click_contactInfo.png)
 
-1.	When you reach this point, you should have understood, how to edit the properties of a SensorML document using *SMLE*. Entries highlighted using *blue* colour reveal editable properties within a new nested window. Form fields represent the values of a certain property. E.g., within the **Contact** element, there are three additional elements and two form fields to be edited. Within this guide only the **Address** element is configured subsequently. So click on it to open it as a new nested window.
+1.	When you reach this point, you should have understood, how to edit the properties of a SensorML document using **SMLE**. Entries highlighted using *blue* colour reveal editable properties within a new nested window. Form fields represent the values of a certain property. E.g., within the **Contact** element, there are three additional elements and two form fields to be edited. Within this guide only the **Address** element is configured subsequently. So click on it to open it as a new nested window.
 
 ![Create from Template - Edit Elements - Click on Address](images/add_information/click_address.png)
 
@@ -116,7 +116,7 @@ Back on the hierarchy level *Classifier list* you should verify that the edited 
 
 ![Create from Template - Edit Elements - Override Values set by Template - 3](images/add_information/override_values_createdByTemplate_3.png)
 
-As shown by this simple example, you should navigate through all pre-set values and edit them to the de facto values of the sensor for which you create the SensorML document. *SMLE* will **NOT inform** you about any property that still carries any *null* values. So you will have to carefully inspect each property by yourself. Should you wish to remove any property, you are free to do so. Basing on a template is up to your choice and only provides recommendations on how to model sensor descriptions using the SensorML standard. In theory, you are free to include the necessary information about your sensor using other properties/elements of SensorML. However, using templates and its recommended pre-set properties allows better comparability to descriptions of similar sensors.
+As shown by this simple example, you should navigate through all pre-set values and edit them to the de facto values of the sensor for which you create the SensorML document. **SMLE** will **NOT inform** you about any property that still carries any *null* values. So you will have to carefully inspect each property by yourself. Should you wish to remove any property, you are free to do so. Basing on a template is up to your choice and only provides recommendations on how to model sensor descriptions using the SensorML standard. In theory, you are free to include the necessary information about your sensor using other properties/elements of SensorML. However, using templates and its recommended pre-set properties allows better comparability to descriptions of similar sensors.
 
 ### Publish and persist new SensorML Document
 
@@ -124,7 +124,7 @@ After adding or overriding the necessary properties to reflect you sensor charac
 
 ![Create Identifier before Publishing](images/create_identifier_before_publishing.png)
 
-When publishing the document, *SMLE* will provide you with a final uneditable view of the XML structure of the new SensorML document for verification purposes. Here you should proofread all the edited properties/elements. When detecting an error or some other reason to return to the edit view, use the **Edit Description** button located above the XML view. If you are satisifed with the preview of the new SensorML document, you find a notification below the XML preview. *SMLE* contacts the SOS instance to check, whether the identifier of the new SensorML instance already exists within the SOS. If not, it informs you about this and offers you a button called **Add Description** to persist the created document within the SOS.
+When publishing the document, **SMLE** will provide you with a final uneditable view of the XML structure of the new SensorML document for verification purposes. Here you should proofread all the edited properties/elements. When detecting an error or some other reason to return to the edit view, use the **Edit Description** button located above the XML view. If you are satisifed with the preview of the new SensorML document, you find a notification below the XML preview. **SMLE** contacts the **SOS** instance to check, whether the identifier of the new SensorML instance already exists within the **SOS**. If not, it informs you about this and offers you a button called **Add Description** to persist the created document within the **SOS**.
 
 ![Publish - Add Description](images/create_from_Template_publish_view_add_description.png)
 
@@ -132,23 +132,23 @@ After clicking the button, you are notified whether the process was successful. 
 
 ![Publish - Add Description - Success](images/create_from_Template_publish_view_add_description_success.png)
 
-Should the identifier already exist within the SOS, You are asked if you want to *update* the existing document using an **Update Description** button. Here you should carefully decide what to do. If you created a new SensoML instance for a new sensor, the *identifier* should be new as well. If you receive a notification that the *identifier* already exists, you should edit the document and alter the property.
+Should the identifier already exist within the **SOS**, You are asked if you want to *update* the existing document using an **Update Description** button. Here you should carefully decide what to do. If you created a new SensoML instance for a new sensor, the *identifier* should be new as well. If you receive a notification that the *identifier* already exists, you should edit the document and alter the property.
 
 ![Publish - Update Description](images/create_from_Template_publish_view_update_description.png)
 
-Once persisted within the SOS, you are still able to edit the document using the **Edit Description** button and re-publish the document. In this case the identifier should remain untouched to only *update* the existing document within the SOS.
+Once persisted within the **SOS**, you are still able to edit the document using the **Edit Description** button and re-publish the document. In this case the identifier should remain untouched to only *update* the existing document within the **SOS**.
 
 ### Error Handling
 
-When trying to publish a SensorML document, the underlying SOS might return with an error message in case the SensorML document does not conform to the requirements of the SOS and SensorML standard. An error message may have several reasons. To mention a few: a needed element may not be specified, empty elements may not be allowed or provided property values do not pass validity checks. If the SOS rejects the SensorML document for whatever reason, *SMLE* displays the error message at the bottom of the publish view, according to the next figure.
+When trying to publish a SensorML document, the underlying **SOS** might return with an error message in case the SensorML document does not conform to the requirements of the **SOS** and SensorML standard. An error message may have several reasons. To mention a few: a needed element may not be specified, empty elements may not be allowed or provided property values do not pass validity checks. If the **SOS** rejects the SensorML document for whatever reason, **SMLE** displays the error message at the bottom of the publish view, according to the next figure.
 
 ![Publish - Add Description - Error](images/create_from_Template_publish_view_add_description_error.png)
 
-Currently, the displayed error message is forwarded from the SOS instance and should indicate what kind of error occurs. Hopefully, the message contains a hint on how to edit the SensorML document to make it valid. In this case the error message notifies you of a missing required element called *linkage* within the higher-level element *CI_OnlineResource*. Sadly, there is no indication on where to find the latter. To troubleshoot the problem in worst case scenario, edit the document and inspect every hierarchy level to find the required element and provide a proper value for it. For instance, the created *Contact* element defines an element **Online Resource** with the property **Linkage**. So, navigate to *Contact List - Responsible Party - Contact (Contact Info) - Online Resource* to enter a suitable value, as shown in the following figure.
+Currently, the displayed error message is forwarded from the **SOS** instance and should indicate what kind of error occurs. Hopefully, the message contains a hint on how to edit the SensorML document to make it valid. In this case the error message notifies you of a missing required element called *linkage* within the higher-level element *CI_OnlineResource*. Sadly, there is no indication on where to find the latter. To troubleshoot the problem in worst case scenario, edit the document and inspect every hierarchy level to find the required element and provide a proper value for it. For instance, the created *Contact* element defines an element **Online Resource** with the property **Linkage**. So, navigate to *Contact List - Responsible Party - Contact (Contact Info) - Online Resource* to enter a suitable value, as shown in the following figure.
 
 ![Publish - Add Description](images/add_information/provide_online_resource_for_contact.png)
 
-After that hit the **Publish Description** button again to open the publish view and add/update the new sensor description. If no other error occurs, the SOS will then save the transmitted document.
+After that hit the **Publish Description** button again to open the publish view and add/update the new sensor description. If no other error occurs, the **SOS** will then save the transmitted document.
 
 Create new SensorML Document
 ----------------------------
@@ -170,7 +170,7 @@ To view existing sensor descriptions, you do not have to be logged in. Navigate 
 
 ![View Description - Select SensorML Document](images/view_select_from_dropdown.png)
 
-After selecting a certain document, *SMLE* provides you with a collapsed tree structure of the elements of the SensorML document, as shown in the subsequent figure.
+After selecting a certain document, **SMLE** provides you with a collapsed tree structure of the elements of the SensorML document, as shown in the subsequent figure.
 
 ![View Description - As Tree Structure](images/view_as_tree.png)
 
@@ -189,11 +189,11 @@ To edit a previously created SensorML document, click on the menu **Edit/View** 
 
 ### Role of the unique Identifier
 
-Each stored SensorML document stored in the SOS is referenced by its unique *identifier*. When you intend to only update an existing sensor description, it is vital that you leave the *identifier* untouched. When you change it and then publish the document, you will create a whole new additional document, under the assumption that the new identifier does not exist yet. In a worse case the modified identifier references a different existing SensorML instance dscribing a different sensor. As a consequence, you should always carefully check the *identifier* property and associated notification messages of *SMLE* to prevent false publishing of a document.
+Each stored SensorML document stored in the **SOS** is referenced by its unique *identifier*. When you intend to only update an existing sensor description, it is vital that you leave the *identifier* untouched. When you change it and then publish the document, you will create a whole new additional document, under the assumption that the new identifier does not exist yet. In a worse case the modified identifier references a different existing SensorML instance dscribing a different sensor. As a consequence, you should always carefully check the *identifier* property and associated notification messages of **SMLE** to prevent false publishing of a document.
 
 ### Restriction to only edit your own Content
 
-You are enabled to view and edit any available SensorML document of the underlying SOS. However, when trying to re-publish/update a modified SensorML document, which is not linked to your account, *SMLE* will inform you that you miss the appropriate permission, as the underlying SOS rejects the update from the non-authorized user.
+You are enabled to view and edit any available SensorML document of the underlying **SOS**. However, when trying to re-publish/update a modified SensorML document, which is not linked to your account, **SMLE** will inform you that you miss the appropriate permission, as the underlying **SOS** rejects the update from the non-authorized user.
 
 ![Updating a document of another user fails due to missing permission](images/update_fail_no_permission.png)
 
@@ -208,11 +208,11 @@ To delete a previously created sensor description navigate to menu **Delete**. N
 
 ![Delete Sensor Description - Choose Document](images/delete_selection.png)
 
-After selection you see the XML structure of the selected document. Inspect it to verify that this is the desired document, which should be deleted. By clicking the **Delete sensor description** button, you will irretrievably delete the document! *SMLE* will not prompt you with an additional conformation request.
+After selection you see the XML structure of the selected document. Inspect it to verify that this is the desired document, which should be deleted. By clicking the **Delete sensor description** button, you will irretrievably delete the document! **SMLE** will not prompt you with an additional conformation request.
 
 ![Delete Sensor Description - Execute Deletion](images/delete_perform_delete.png)
 
-As a result, the document is deleted from the underlying SOS and *SMLE* displays a success message.
+As a result, the document is deleted from the underlying **SOS** and **SMLE** displays a success message.
 
 ![Delete Sensor Description - Success Message](images/delete_success.png)
 
