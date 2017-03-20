@@ -1,22 +1,26 @@
 SensorML Editor (*SMLE*) Manual
 ===============================
 
-This document provides helpful information on how to use the **SensorML Editor (*SMLE*\)** Web application provided by **52&deg;North**. It uses a tutorial-based manner to guide you through the basic functionalities. This documentation is based on the SMLE version from October 2016. The most current development of *SMLE* is available from the [official GitHub page of *SMLE*](https://github.com/52North/SMLE).
+This document provides helpful information on how to use the **SensorML Editor (*SMLE*\)** Web application provided by **52&deg;North**. It uses a tutorial-based manner to guide you through the basic functionalities. This documentation is based on the SMLE version from March 2017. The most current development of *SMLE* is available from the [official GitHub page of *SMLE*](https://github.com/52North/SMLE).
 
 Basic Visual Interface of *SMLE*
 --------------------------------
 
-This section provides general information about the Web application *SMLE*. As the full name indicates, the SensorML Editor is a Web application allowing users to manage SensorML documents of a preconfigured Sensor Observation Service (SOS). This SOS instance is configured during installation by an IT-expert and is currently not changeable at runtime. *SMLE* provides a visual interface for various tasks such as viewing/editing/deleting existing SensorML documents or creating new sensor descriptions. Without logging in, the application only allows to view existing sensor descriptions. Only after a **successful login** users may perform the administrative tasks *create*, *edit*/*update* and *delete*. To log in you can use your **GitHub credentials**.
+This section provides general information about the Web application **SMLE**. As the full name indicates, the SensorML Editor is a Web application allowing users to manage SensorML documents of a preconfigured *Sensor Observation Service (SOS)*. This *SOS* instance is configured during installation by an IT-expert and is currently not changeable at runtime. *SMLE* provides a visual interface for various tasks such as *viewing/editing/deleting* existing SensorML documents or *creating* new sensor descriptions. Without logging in, the application only allows to view existing sensor descriptions. Only after a **successful login** users may perform the administrative tasks *create*, *edit*/*update* and *delete*. To log in users require an account on the [FixO3 Platform](http://www.fixo3.eu/). **FixO3** is an acronym for "Fixed-Point Open Ocean Observatories", a project funded by the European Union, where 52&deg;North participated. **SMLE** was mainly developed within the context of the **FixO3** project.
 
 As an exemplar instance of *SMLE*, this guide uses the application from http://pilot.52north.org:3000/#/. The landing page greets you as shown in the subsequent figure.
 
-![Landing Page](images/landing_page.png)
+![Landing Page of SMLE](images/landing_page.png)*Landing Page of SMLE*
 
-The dark grey navigation bar contains the available functionalities of *SMLE*, which are accessible by clicking the corresponding button. Via **New** and **Create from Template**, new SensorML documents can be created. Using **Edit/View**, existing sensor descriptions can be viewed and edited. However, as mentioned above, the administrative functionalities can only be performed once logged in. In consequence, as a first step, you should log in via the **login** button located at the right of the navigation bar. This will open a popup window to enter your GitHub credentials. **Note that you may have to enable popups within your browser!**
+At the top of the application, a bar shows the main project partners. A click on any of the labels will navigate the browser to the associated homepage of the respective partner. The dark grey navigation bar below contains the available functionalities/views of *SMLE*, which are accessible by clicking the corresponding button. Via **New** and **Create from Template**, new SensorML documents can be created. When accessing the application, **SMLE** automatically opens the **New** view. Using **Edit/View**, existing sensor descriptions can be viewed and edited. However, as mentioned above, the administrative functionalities can only be performed once logged in. In consequence, as a first step, you should log in via the **login** button located at the right of the navigation bar. This will open a popup window showing the [FixO3 login page](http://www.fixo3.eu/login/) where you may enter your **FixO3** credentials. **Note that you have to enable popups within your browser!**
 
-![Login Popup](images/login.png)
+![Login Popup for FixO3 Credentials](images/login_fixo3.png)*Login Popup for FixO3 Credentials*
 
-After signing for the first time, you will have to authorize *SMLE*, allowing the application to access your GitHub account. This step is not required for subsequent logins. When logged in, the **login** button is replaced by your GitHub name and the option to logout. In addition, the navigation bar is enriched with a new button called **Delete** allowing you to delete your sensor descriptions. Having logged in, all functionalities become available. Each is introduced subsequently within its own section.
+After signing for the first time, you will have to authorize *SMLE*, allowing the application to access your **FixO3** account. E.g., the following figure shows the screen, where user "c.danowski@52north.org" may grant permission to **SMLE**:
+
+![Login - Grant Permission to SMLE](images/login_authorize_smle.png)*Login - Grant Permission to SMLE*
+
+This step is not required for subsequent logins. When logged in, the **login** button is replaced by your **FixO3 account name** and the option to logout. In addition, the navigation bar is enriched with a new button called **Delete** allowing you to delete your sensor descriptions. Having logged in, all functionalities become available. Each is introduced subsequently within its own section.
 
 Modifiable Items and Restrictions
 ---------------------------------
