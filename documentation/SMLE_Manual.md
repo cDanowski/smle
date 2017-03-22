@@ -44,7 +44,9 @@ After signing for the first time, you will have to authorize **SMLE**, allowing 
 
 ![Login - Grant Permission to SMLE](images/login_authorize_smle.png)*Login - Grant Permission to SMLE*
 
-This step is not required for subsequent logins. When logged in, the **login** button is replaced by your **FixO3 account name** and the option to logout. In addition, the navigation bar is enriched with a new button called **Delete** allowing you to delete your sensor descriptions. Having logged in, all functionalities become available. Each is introduced subsequently within its own section.
+This step may not be required for subsequent logins. However, currently the [FixO3 portal](http://www.fixo3.eu) requires an additional authorization of **SMLE** each time you log in.
+
+When logged in, the **login** button is replaced by your **FixO3 account name** and the option to logout. In addition, the navigation bar is enriched with a new button called **Delete** allowing you to delete your sensor descriptions. Having logged in, all functionalities become available. Each is introduced subsequently within its own section.
 
 Modifiable Items and Restrictions
 ---------------------------------
