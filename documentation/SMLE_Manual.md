@@ -36,85 +36,61 @@ Create SensorML Document from Template
 
 ### Find and Select Template
 
-The application allows to create a new sensor description based on an existing template that already fills parts of the SensorML structure. Select **Create from Template** from the navigation bar to open a new menu where you can browse and search for available SensorML templates provided by the [ESONET YELLOW PAGES](http://www.esonetyellowpages.com/). As of October 2016 380 templates are available that can be filtered through appropriate keywords. To browse all templates, simply hit the **Search** button without any keyword. To filter the templates, enter any keyword and hit the **Search** button. The following example shows all entries for the keyword *salinity*.
+The application allows to create a new sensor description based on an existing template that already fills parts of the SensorML structure. Select **Create from Template** from the navigation bar to open a new menu where you can browse and search for available SensorML templates provided by the [ESONET YELLOW PAGES](http://www.esonetyellowpages.com/). As of March 2017 380 templates are available that can be filtered through appropriate keywords. To browse all templates, simply hit the **Search** button without any keyword. To filter the templates, enter any keyword and hit the **Search** button. The following example shows all entries for the keyword *salinity*.
 
-![Create from Template - Filter Templates](images/create_from_template_filter.png)
+![Create from Template - Filter Templates](images/create_from_template_filter.png)*Create from Template - Filter Templates*
 
 From the list of returned templates you may select the target template, which is used to create a new SensorML document. E.g. when selecting the template *Hydrolab Conductivity Sensor*, a description of the selected sensor as well as the option to **create a sensor description of this template** is provided. Optionally, you may already enter a new unique identifier for the new SensorML document, either manually or by clicking the **Create identifier** button, which generates a system-wide unique identifier. However, the identifier may be defined later as well.
 
-![Create from Template - Select Template](images/create_from_Template_selection.png)
+![Create from Template - Select Template](images/create_from_Template_selection.png)*Create from Template - Select Template*
 
 ### Instantiate and Edit new SensorML Document based on selected Template
 
-After selecting a template (and providing a new identifier) you may click on the button **Create sensor description from template**. This will instantiate a new SensorML document using the selected template to provide the necessary SensorML elements and insert predefined values. The application switches to the edit view, where the elements of the SensorML document are displayed. On the left side, the edit view allows to *add* new metadata within various elements of the sensor description or *edit* existing properties. On the right side, you may toggle the tree view to gain an overview of the specified metadata as a tree structure.
+After selecting a template (and providing a new identifier) you may click on the button **Create sensor description from template**. This will instantiate a new SensorML document using the selected template to provide the necessary SensorML elements and insert predefined values. The application switches to the **edit view**, where the elements of the SensorML document are displayed. It allows to *add* new metadata within various elements of the sensor description or *edit* existing properties.
 
-![Create from Template - Instantiate Template](images/create_from_Template_fill_template.png)
+![Create from Template - Instantiate Template](images/create_from_Template_fill_template.png)*Create from Template - Instantiate Template*
 
-If specified, the value of the second entry *Identifier* stores the unique identifier, which can still be modified. Optionally, you can activate the expanded view of *all available elements* by setting the checkbox of **Show all** located at the top of the edit window. If activated, additional element fields are revealed to be edited.
+The embedded frame characterizes the selected *Hydrolab Conductivity Sensor* as a **Physical System** offering appropriate editable properties for its sensor description. Other *description types / sensor types* are **Physical Component** and **Discovery Profile**, whose roles will be explained in section [Create new SensorML Document](#create-new-sensorml-document). The **edit view** provides editable fields within the mentioned embedded frame. By default, some descriptive properties (such as the field ***Description***) are hidden from the user. To show all editable properties, you have to check the respective ***Show all*** field located at the top of the frame. Via the ***Reset*** button on its right, all manual edits can be reset to their initial state.
+
+Concerning the editable fields, the embedded frame first contains an area with basic general properties such as ***GML ID*** or the ***Identifier***. If specified earlier, the ***Value*** property of ***Identifier*** stores the unique identifier, which can still be modified. Other thematically related properties are grouped by inner cyanish coloured collapsible elements. E.g. in the upper figure there are two collapsible sections visible, first the collapsed ***Keywords*** section and second the expanded ***Identification*** section. On expansion, they reveal editable properties.
 
 The process of adding new information uses a nested window design to resemble the hierarchy of the added item. As an example, the subsequent series of figures shows how to add *contact information*. Notice how with each new hierarchy level a new nested window appears, where you can add/enter new information. To close a nested windows, you may either use the **Close** button on the top right of the window or click on the vertically oriented name of a previous hierarchy element on the left.
 
-1.	Navigate to the **Contacts** element of the SensorML document. Click on the **Add** button, which adds the item *Contact list*.
+1.	Navigate to the **Contacts** collapsible of the SensorML document and expand it. Click on the **create element** button, which creates a new *Contacs* element. ![Create from Template - Edit Properties - Click on 'create element' in 'Contacts' Section](images/add_information/contacts_click_createElement.png)*Create from Template - Edit Properties - Click on 'create element' in 'Contacts' Section*
 
-![Create from Template - Edit Elements - Click on Add in Contacts Element](images/add_information/contacts_click_add.png)
+2.	The creation of the new **Contacts** element reveals a new **Add** button. Click it to *add* the next hierarchy level of the **Contacts** element, in this case the item *Responsible party*. ![Create from Template - Edit Properties - Click on 'Add' in 'Contacts' Element](images/add_information/contacts_click_add.png)*Create from Template - Edit Properties - Click on 'Add' in 'Contacts' Element*
 
-1.	Click on the newly created *Contact List* element to open it in a new nested window.
+3.	Click on **Responsible party** to open and edit it in a new nested window. ![Create from Template - Edit Properties - Click on 'Responsible party'](images/add_information/click_responsibleParty.png)*Create from Template - Edit Properties - Click on 'Responsible party'*
 
-![Create from Template - Edit Elements - Click on Contact list](images/add_information/click_contactList.png)
+4.	Fill the form fields of the **Responsible party** element and, in addition, click on **Create Contact Info**, which adds a new item called *Contact Info*. Whenever you edit any form field, the corresponding content is immediately updated with the new value. Switching back to previous hierarchy level (in this case *Physical System* or *Contact List*) is allowed at any time. All changed values have been recognized and applied by **SMLE**. ![Create from Template - Edit Properties - Enter Values for 'Responsible party'](images/add_information/enter_responsibleParty_values.png)*Create from Template - Edit Properties - Enter Values for 'Responsible party'*
 
-1.	Click the **Add** button to create the new item *Responsible party*.
+5.	After creating a *Contact info* element click on it to open and edit its properties in a new nested window. ![Create from Template - Edit Properties - Click on 'Contact info'](images/add_information/click_contactInfo.png)*Create from Template - Edit Properties - Click on 'Contact info'*
 
-![Create from Template - Edit Elements - Click on Add in Contact List](images/add_information/contactList_click_Add.png)
+6.	When you reach this point, you should have understood, how to edit the properties of a SensorML document using **SMLE**. Entries highlighted using *blue* colour reveal editable properties within a new nested window. Form fields represent the values of a certain property. E.g., within the depicted **Contact** element, there are three additional nested elements and two form fields to be edited. Within this guide only the **Address** element is configured subsequently. So click on it to open it as a new nested window. ![Create from Template - Edit Properties - Click on 'Address'](images/add_information/click_address.png)*Create from Template - Edit Properties - Click on 'Address'*
 
-1.	Click on **Responsible party** to open and edit it in a new nested window.
+7.	Fill out the form fields of the **Address** element with your values. Of particular interest are the fields **Delivery point** and **E-mail**. Both have additional interactions called *Add* and *Clear*. The *Clear* button clears the entered value while the *Add* button must be clicked to persist the entered value for the property. As these specific properties allow multiple values, it is not sufficient to only enter the new value within the form field. Instead you have to explicitly *add* it. ![Create from Template - Edit Properties - Enter 'Address' Values](images/add_information/enter_address_values.png)*Create from Template - Edit Properties - Enter 'Address' Values*
 
-![Create from Template - Edit Elements - Click on Responsible party](images/add_information/click_responsibleParty.png)
+8.	After explicitly adding the values of *Delivery point* and *E-mail*, you may enter a second value or remove any. The figure below shows that this guide defined one property for **Delivery Point** and two properties for **E-mail**. ![Create from Template - Edit Properties - Add 'Delivery Point' and 'E-Mail'](images/add_information/add_deliveryPoint_and_email.png)*Create from Template - Edit Properties - Add 'Delivery Point' and 'E-Mail'*
 
-1.	Fill the form fields of the **Responsible party** element and, in addition click on **Create Contact Info**, which adds a new item called *Contact Info*. Whenever you edit any form field, the corresponding content is immediately updated with the new value. Switching back to previous hierarchy level (in this case *Physical System* or *Contact List*) is allowed at any time. All changed values have been recognized and applied by **SMLE**.
+9.	To finish editing the contact info you may either use the *Close* button within each nested window (located on the top right) or click on the vertically oriented name of a previous hierarchy level on the left. Using the latter, you may directly return to the leftmost window (in this case *Physical System*), which is the top-level of the SensorML Document.
 
-![Create from Template - Edit Elements - Enter values for responsible party](images/add_information/enter_responsibleParty_values.png)
-
-1.	Click on Contact Info to open and edit it in a new nested window.
-
-![Create from Template - Edit Elements - Click on Contact info](images/add_information/click_contactInfo.png)
-
-1.	When you reach this point, you should have understood, how to edit the properties of a SensorML document using **SMLE**. Entries highlighted using *blue* colour reveal editable properties within a new nested window. Form fields represent the values of a certain property. E.g., within the **Contact** element, there are three additional elements and two form fields to be edited. Within this guide only the **Address** element is configured subsequently. So click on it to open it as a new nested window.
-
-![Create from Template - Edit Elements - Click on Address](images/add_information/click_address.png)
-
-1.	Fill out the form fields of the **Address** element with your values. Of particular interest are the fields *Delivery point* and *E-mail*. Both have additional interactions called *Add* and *Clear*. The *Clear* button clears the entered value while the *Add* button must be clicked to persist the entered value for the property. As these specific properties allow multiple values, it is not sufficient to only enter the new value within the form field. Instead you have to explicitly *add* it.
-
-![Create from Template - Edit Elements - Enter Address values](images/add_information/enter_address_values.png)
-
-1.	After explicitly adding the values of *Delivery point* and *E-mail*, you may enter a second value or remove any value.
-
-![Create from Template - Edit Elements - Add Delivery Point and E-Mail](images/add_information/add_deliveryPoint_and_email.png)
-
-1.	To finish editing the contact info you may either use the *Close* button within each nested window (located on the top right) or click on the vertically oriented name of a previous hierarchy level on the left. Using the latter, you may directly return to the leftmost window (in this case *Physical System*), which is the top-level of the SensorML Document. To verify the applied changes you may use the *tree* view on the right and expand it at the relevant elements. Alternatively navigate to the respective element within the left menu to inspect it and perform additional edits.
-
-![Create from Template - Edit Elements - Check Tree View for Changes](images/add_information/go_backTo_physicalSystem_check_treeView.png)
-
-At this point, you should have the knowledge to edit any property of the SensorML description. You may *add* new elements or *edit* the values of a certain element in a nested window. Clicking on any item, which is highlighted using *blue* colour, will open that element as a new nested window to reflect the hierarchy of the SensorML document structure.
+At this point, you should have the knowledge to edit any property of the SensorML description. You may *add* new elements or *edit* the values of a existing elements in a nested window. Clicking on any item, which is highlighted using *blue* colour, will open that element as a new nested window to reflect the hierarchy of the SensorML document structure.
 
 ### Preset Structure and Values of the Template
 
-As you may have noticed, when using a template certain elements are already pre-set with values from the template. While some values represent template-specific standard values that do not require changes, certain other elements are instantiated using *null* values. However, when relying on the template, you should have the knowledge to identify those elements and provide suitable values.
+As you may have noticed, when using a template certain elements are already pre-set with values from the template. While some values represent template-specific standard values that do not require changes (some values are even hidden from the user if the *Show all* checkmark is not checked, like the sensor **Description**), certain other elements are instantiated using ***null*** values. However, when relying on the template, you should have the knowledge to identify those elements and provide suitable values.
 
-As an example, using the *Hydrolab Conductivity Sensor* template, the *Classification* element is pre-set with certain classifiers. Open this element by clicking on **Classifier list (...)**.
+As an example, using the *Hydrolab Conductivity Sensor* template, the **Classifiers** element within the **Classification** section is pre-set with certain classifier properties. Open this element by expanding the **Classification** collapsible.
 
-![Create from Template - Edit Elements - Check Tree View for Changes](images/add_information/click_classifierList.png)
+![Create from Template - Edit Elements - Expand 'Classification' Section](images/add_information/expand_classification.png)*Create from Template - Edit Elements - Expand 'Classification' Section*
 
-This will reveal a nested window with all pre-set classifiers of the template. As you can see, the value of most of the *classifiers* is set to **null** or **\-**. However, as they describe important operational characteristics of the chosen sensor, you should fill them with applicable real values. To replace/override any value, click on the corresponding item. E.g. click on **Operating depth** to open it in a new nested window.
+This will reveal a list of all pre-set **Classifiers** of the template. A **Classifier** comprises an *identifier/label* and a *value*. As you can see, the *value* of most of the **Classifiers** is set to **null** or **\-**. However, as they describe important operational characteristics of the chosen sensor, you should fill them with applicable real values. To replace/override any value, click on the corresponding item. E.g. click on **Operating depth** to open it in a new nested window called *Term*. Within it you might change the **Label** and in particular the **Value** of the displayed item. As soon as you replace the **Value** property, you may close the *Term* edit window.
 
-![Create from Template - Edit Elements - Override Values set by Template - 1](images/add_information/override_values_createdByTemplate_1.png)
-
-Within the edit window you might change the label and in particular the value of the displayed item. As soon as you replace the **value** property, you may close the *Term* edit window.
-
-![Create from Template - Edit Elements - Override Values set by Template - 2](images/add_information/override_values_createdByTemplate_2.png)
+![Create from Template - Edit Properties - Override Values set by Template - 1](images/add_information/override_values_createdByTemplate_1.png)*Create from Template - Edit Properties - Override Values set by Template - 1*
 
 Back on the hierarchy level *Classifier list* you should verify that the edited property indeed carries the new value.
 
-![Create from Template - Edit Elements - Override Values set by Template - 3](images/add_information/override_values_createdByTemplate_3.png)
+![Create from Template - Edit Properties - Override Values set by Template - 2](images/add_information/override_values_createdByTemplate_2.png)*Create from Template - Edit Properties - Override Values set by Template - 2*
 
 As shown by this simple example, you should navigate through all pre-set values and edit them to the de facto values of the sensor for which you create the SensorML document. **SMLE** will **NOT inform** you about any property that still carries any *null* values. So you will have to carefully inspect each property by yourself. Should you wish to remove any property, you are free to do so. Basing on a template is up to your choice and only provides recommendations on how to model sensor descriptions using the SensorML standard. In theory, you are free to include the necessary information about your sensor using other properties/elements of SensorML. However, using templates and its recommended pre-set properties allows better comparability to descriptions of similar sensors.
 
