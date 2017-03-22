@@ -145,6 +145,8 @@ After that hit the **Publish Description** button again to open the publish view
 Create new SensorML Documents
 -----------------------------
 
+*You need to be logged in in order to publish a new SensorML description.*
+
 In contrast to creating a new SensorML instance using a template, you are free to create a completely new document via the menu **New** from the navigation bar. As first step you are prompted to choose the *descriptionType* of the new document instance. Currently you can choose between *PhysicalSystem* for single sensor devices, *PhysicalComponent* for sensor components within a multisensor component-based setting and *DiscoveryProfile*. While the first two allow the definition of SensorML sensor descriptions in an arbitrary way (without many restrictions on elements and properties), the latter option *DiscoveryProfile* conforms to the [SensorML Profile for Discovery](http://portal.opengeospatial.org/files/?artifact_id=33284) as specified by the OGC. Its purpose is to apply a variety of restrictions regarding the existance and value ranges of SensorML elements and properties in the context of *discovery and harvesting services and mechanisms*. For this reason, the ***Discovery Profile*** declares mandatory elements as well as a prescribed structure of sensor descriptions.
 
 ```
