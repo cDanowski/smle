@@ -183,19 +183,19 @@ Below both views you find two buttons **Edit sensor description** and **Copy sen
 Edit your own SensorML Descriptions
 -----------------------------------
 
-*You need to be logged in in order to edit an existing SensorML description. Also you are only allowed to edit sensor descriptions that you have created with your account.*
+*You need to be logged in in order to edit an existing SensorML description. Also you are only allowed to re-publish sensor descriptions that you have created with your account.*
 
-To edit a previously created SensorML document, click on the menu **Edit/View** from the navigation bar and select the **id** of the document you intend to edit. This will provide you with the view window as already described in the previous section. To edit the document click on **Edit sensor description**, which opens the edit view, where all stored information of the selected document is displayed. Here you can apply changes like add missing information or override/remove existing elements/properties. The process of editing has already been described in section [Create SensorML Document from Template](#create-sensorml-document-from-template) and is skipped here. Please refer to that section for details. After editing you can re-publish the document by updating the document using the same *identifier*.
+To edit a previously created SensorML document, click on the menu **Edit/View** from the navigation bar and select the **id** of the document you intend to edit. This will provide you with the view window as already described in the previous section. To edit the document click on **Edit sensor description**, which opens the edit view, where all stored information of the selected document is displayed. Here you can apply changes, e.g. provide missing information or override/remove existing elements/properties. The process of editing has already been described in section [Create SensorML Document from Template](#create-sensorml-document-from-template) and is skipped here. Please refer to that section for details. After editing you can re-publish the document by updating the document using the same *identifier*. Note that you are only authorized to re-publish content linked to your account, as described [below](#restriction-to-only-edit-your-own-content).
 
 ### Role of the unique Identifier
 
-Each stored SensorML document stored in the **SOS** is referenced by its unique *identifier*. When you intend to only update an existing sensor description, it is vital that you leave the *identifier* untouched. When you change it and then publish the document, you will create a whole new additional document, under the assumption that the new identifier does not exist yet. In a worse case the modified identifier references a different existing SensorML instance dscribing a different sensor. As a consequence, you should always carefully check the *identifier* property and associated notification messages of **SMLE** to prevent false publishing of a document.
+Each stored SensorML document stored in the **SOS** is referenced by its unique *identifier*. When you intend to only update an existing sensor description, it is vital that you leave the *identifier* untouched. When you change it and then publish the document, you will create a whole new additional document, under the assumption that the new identifier does not exist yet. In a worse case the modified identifier references a different existing SensorML instance describing a different sensor. As a consequence, you should always carefully check the *identifier* property and associated notification messages of **SMLE** to prevent false (re-)publishing of a document.
 
 ### Restriction to only edit your own Content
 
-You are enabled to view and edit any available SensorML document of the underlying **SOS**. However, when trying to re-publish/update a modified SensorML document, which is not linked to your account, **SMLE** will inform you that you miss the appropriate permission, as the underlying **SOS** rejects the update from the non-authorized user.
+You are enabled to view and edit any available SensorML document of the underlying **SOS**. However, when trying to re-publish/update a modified SensorML document, which is not linked to your account, **SMLE** will inform you that you miss the appropriate permission, as the underlying **SOS** rejects the the associated **UpdateSensorDescription request** from the non-authorized user.
 
-![Updating a document of another user fails due to missing permission](images/update_fail_no_permission.png)
+![Updating a document of another user fails due to missing permission](images/update_fail_no_permission.png)*Updating a document of another user fails due to missing permission*
 
 As a result, you are only allowed to update sensor descriptions that you have created with your current account. To still save the modifications of a certain sensor description, for which you do not have the sufficient permission, you might change its *identifier* and thus create an additional sensor description. Mind that this process preserves the *old* sensor description and creates a modified *new* version using a different *identifier*. Whether this approach is applicable is up to you and your working environment.
 
@@ -206,16 +206,16 @@ Delete your own SensorML Descriptions
 
 To delete a previously created sensor description navigate to menu **Delete**. Note that this menu is only available after successful login. Within the delete view, you choose the desired document via a dropdown list.
 
-![Delete Sensor Description - Choose Document](images/delete_selection.png)
+![Delete Sensor Description - Choose Document](images/delete_selection.png)*Delete Sensor Description - Choose Document*
 
 After selection you see the XML structure of the selected document. Inspect it to verify that this is the desired document, which should be deleted. By clicking the **Delete sensor description** button, you will irretrievably delete the document! **SMLE** will not prompt you with an additional conformation request.
 
-![Delete Sensor Description - Execute Deletion](images/delete_perform_delete.png)
+![Delete Sensor Description - Execute Deletion](images/delete_perform_delete.png)*Delete Sensor Description - Execute Deletion*
 
 As a result, the document is deleted from the underlying **SOS** and **SMLE** displays a success message.
 
-![Delete Sensor Description - Success Message](images/delete_success.png)
+![Delete Sensor Description - Success Message](images/delete_success.png)*Delete Sensor Description - Success Message*
 
 ### Restriction to only delete your own Content
 
-Similar to the restriction of editing your own content, you are also only authorized to delete any SensorML document that is linked to your current account. You are not allowed to delete the descriptions of another user.
+Similar to the restriction of [editing your own content](#restriction-to-only-edit-your-own-content), you are also only authorized to delete any SensorML document that is linked to your current account. You are not allowed to delete the descriptions of another user.
