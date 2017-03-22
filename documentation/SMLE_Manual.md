@@ -40,9 +40,9 @@ At the top of the application, a bar shows the main project partners. A click on
 
 ![Login Popup for FixO3 Credentials](images/login_fixo3.png)*Login Popup for FixO3 Credentials*
 
-After signing for the first time, you will have to authorize **SMLE**, allowing the application to access your **FixO3** account. E.g., the following figure shows the screen, where user "c.danowski@52north.org" may grant permission to **SMLE**:
+After signing in for the first time, you will have to authorize **SMLE**, allowing the application to access your **FixO3** account. E.g., the following figure shows the screen, where user "c.danowski@52north.org" may grant permission to **SMLE**:
 
-![Login - Grant Permission to SMLE](images/login_authorize_smle.png)*Login - Grant Permission to SMLE*
+![Login - Grant Permission to SMLE](images/login_authorize_smle.png)*Grant Permission to SMLE*
 
 This step may not be required for subsequent logins. However, currently the [FixO3 portal](http://www.fixo3.eu) requires an additional authorization of **SMLE** each time you log in.
 
@@ -62,7 +62,7 @@ Create SensorML Document from Template
 
 ### Find and Select Template
 
-The application allows to create a new sensor description based on an existing template that already fills parts of the SensorML structure. Select **Create from Template** from the navigation bar to open a new menu where you can browse and search for available SensorML templates provided by the [ESONET YELLOW PAGES](http://www.esonetyellowpages.com/). As of March 2017 380 templates are available that can be filtered through appropriate keywords. To browse all templates, simply hit the **Search** button without any keyword. To filter the templates, enter any keyword and hit the **Search** button. The following example shows all entries for the keyword *salinity*.
+The application allows to create a new sensor description based on an existing template that already fills parts of the SensorML structure. Select **Create from Template** from the navigation bar to open a new menu where you can browse and search for available SensorML templates provided by the [ESONET YELLOW PAGES](http://www.esonetyellowpages.com/). As of March 2017, 380 templates are available that can be filtered through appropriate keywords. To browse all templates, simply hit the **Search** button without any keyword. To filter the templates, enter any keyword and hit the **Search** button. The following example shows all entries for the keyword *salinity*.
 
 ![Create from Template - Filter Templates](images/create_from_Template_filter.png)*Create from Template - Filter Templates*
 
@@ -72,15 +72,15 @@ From the list of returned templates you may select the target template, which is
 
 ### Instantiate and Edit new SensorML Document based on selected Template
 
-After selecting a template (and providing a new identifier) you may click on the button **Create sensor description from template**. This will instantiate a new SensorML document using the selected template to provide the necessary SensorML elements and insert predefined values. The application switches to the **edit view**, where the elements of the SensorML document are displayed. It allows to *add* new metadata within various elements of the sensor description or *edit* existing properties.
+After selecting a template (and optionally providing a new identifier) you may click on the button **Create sensor description from template**. This will instantiate a new SensorML document using the selected template to provide the necessary SensorML elements and insert predefined values. The application switches to the **edit view**, where the elements of the SensorML document are displayed. It allows to *add* new metadata within various elements of the sensor description or *edit* existing properties.
 
 ![Create from Template - Instantiate Template](images/create_from_Template_fill_template.png)*Create from Template - Instantiate Template*
 
-The embedded frame characterizes the selected *Hydrolab Conductivity Sensor* as a **Physical System** offering appropriate editable properties for its sensor description. Another *description type / sensor type* is **Physical Component**, whose roles will be explained in section [Create new SensorML Document](#create-new-sensorml-documents). The **edit view** provides editable fields within the mentioned embedded frame. By default, some descriptive properties (such as the field ***Description***) are hidden from the user. To show all editable properties, you have to check the respective ***Show all*** field located at the top of the frame. Via the ***Reset*** button on its right, all manual edits can be reset to their initial state.
+The embedded frame characterizes the selected *Hydrolab Conductivity Sensor* as a **Physical System** offering appropriate editable properties for its sensor description. Another *description type / sensor type* is **Physical Component**, whose role is explained later in section [Create new SensorML Document](#create-new-sensorml-documents). The **edit view** provides editable fields within the mentioned embedded frame. By default, some properties are hidden from the user (such as the field ***Description***). To show all editable properties, you have to check the respective ***Show all*** field located at the top of the frame. Via the ***Reset*** button on its right, all manual edits can be reset to their initial state.
 
 Concerning the editable fields, the embedded frame first contains an area with basic general properties such as ***GML ID*** or the ***Identifier***. If specified earlier, the ***Value*** property of ***Identifier*** stores the unique identifier, which can still be modified. Other thematically related properties are grouped by inner cyanic coloured collapsible elements. E.g. in the upper figure there are two collapsible sections visible, first the collapsed ***Keywords*** section and second the expanded ***Identification*** section. On expansion, they reveal editable properties.
 
-The process of adding new information uses a nested window design to resemble the hierarchy of the added item. As an example, the subsequent series of figures shows how to add *contact information*. Notice how with each new hierarchy level a new nested window appears, where you can add/enter new information. To close a nested windows, you may either use the **Close** button on the top right of the window or click on the vertically oriented name of a previous hierarchy element on the left.
+The process of adding new information uses a nested window design to resemble the hierarchy of the added item. As an example, the subsequent series of figures shows how to add *contact information*. Notice how with each new hierarchy level a new nested window appears, where you can add/enter new information. To close a nested window, you may either use the **Close** button on the top right of the window or click on the vertically oriented name of a previous hierarchy element on the left.
 
 1.	Navigate to the **Contacts** collapsible of the SensorML document and expand it. Click on the **create element** button, which creates a new *Contacts* element. ![Create from Template - Edit Properties - Click on 'create element' in 'Contacts' Section](images/add_information/contacts_click_createElement.png)*Create from Template - Edit Properties - Click on 'create element' in 'Contacts' Section*
 
@@ -104,13 +104,13 @@ At this point, you should have the knowledge to edit any property of the SensorM
 
 ### Preset Structure and Values of the Template
 
-As you may have noticed, when using a template certain elements are already pre-set with values from the template. While some values represent template-specific standard values that do not require changes (some values are even hidden from the user if the *Show all* checkmark is not checked, like the sensor **Description**), certain other elements are instantiated using ***null*** values. However, when relying on the template, you should have the knowledge to identify those elements and provide suitable values.
+As you may have noticed, when using a template certain elements are already pre-set with values from the template. While some values represent template-specific standard values that do not require changes (some values are even hidden from the user if the *Show all* field is not checked), certain other elements are instantiated using ***null*** or ***empty*** values. However, when relying on the template, you should have the knowledge to identify those elements and provide suitable values.
 
 As an example, using the *Hydrolab Conductivity Sensor* template, the **Classifiers** element within the **Classification** section is pre-set with certain classifier properties. Open this element by expanding the **Classification** collapsible.
 
 ![Create from Template - Edit Elements - Expand 'Classification' Section](images/add_information/expand_classification.png)*Create from Template - Edit Elements - Expand 'Classification' Section*
 
-This will reveal a list of all pre-set **Classifiers** of the template. A **Classifier** comprises an *identifier/label* and a *value*. As you can see, the *value* of most of the **Classifiers** is set to **null** or **\-**. However, as they describe important operational characteristics of the chosen sensor, you should fill them with applicable real values. To replace/override any value, click on the corresponding item. E.g. click on **Operating depth** to open it in a new nested window called *Term*. Within it you might change the **Label** and in particular the **Value** of the displayed item. As soon as you replace the **Value** property, you may close the *Term* edit window.
+This will reveal a list of all pre-set **Classifiers** of the template. A **Classifier** comprises an *identifier/label* and a *value*. As you can see, the *value* of most of the **Classifiers** is set to '**null**' or '**\-**'. However, as they describe important operational characteristics of the chosen sensor, you should fill them with applicable real values. To replace/override any value, click on the corresponding item. E.g. click on **Operating depth** to open it in a new nested window called *Term*. Within it you might change the **Label** and in particular the **Value** of the displayed item. As soon as you replace the **Value** property, you may close the *Term* edit window.
 
 ![Create from Template - Edit Properties - Override Values set by Template - 1](images/add_information/override_values_createdByTemplate_1.png)*Create from Template - Edit Properties - Override Values set by Template - 1*
 
@@ -118,13 +118,13 @@ Back on the hierarchy level *Classifier list* you should verify that the edited 
 
 ![Create from Template - Edit Properties - Override Values set by Template - 2](images/add_information/override_values_createdByTemplate_2.png)*Create from Template - Edit Properties - Override Values set by Template - 2*
 
-As shown by this simple example, you should navigate through all pre-set values and edit them to the de facto values of the sensor for which you create the SensorML document. **SMLE** will **NOT inform** you about any property that still carries any *null* values. So you will have to carefully inspect each property by yourself. Should you wish to remove any property, you are free to do so. Basing on a template is up to your choice and only provides recommendations on how to model sensor descriptions using the SensorML standard. In theory, you are free to include the necessary information about your sensor using other properties/elements of SensorML. However, using templates and its recommended pre-set properties allows better comparability to descriptions of similar sensors.
+As shown by this simple example, you should navigate through all pre-set values and set them to the de facto values of the sensor for which you create the SensorML document. **SMLE** will **NOT inform** you about any property that still carries any *null* values. So you will have to carefully inspect each property by yourself. Should you wish to remove any property, you are free to do so. Basing on a template is up to your choice and only provides recommendations on how to model sensor descriptions using the SensorML standard. In theory, you are free to include the necessary information about your sensor using other properties/elements of SensorML. However, using templates and its recommended pre-set properties allows better comparability to descriptions of similar sensors.
 
 ### Editable Sensor Characteristics
 
-The following figure gives an overview of the main sections within a sensor description:
+The following figure gives an overview of the main sections within a sensor description of a **PhysicalSystem** sensor:
 
-![Editable Sections of a Physical Sensor](images/list_of_editable_sections.png)*Editable Sections of a Physical Sensor*
+![Editable Sections of a Physical Sensor](images/list_of_editable_sections.png)*Editable Sections of a PhysicalSystem Sensor*
 
 This guide does not aim to give a detailed explanation of all SensorML components and which properties you can specify in each section. If you require information SensorML, please refer to the official [SensorML Specification of the OGC](http://www.opengeospatial.org/standards/sensorml).
 
@@ -132,7 +132,7 @@ As you can see in the upper figure, in addition to properties concerning the sen
 
 ### Publish and Persist new SensorML Document
 
-Once the edit process of the sensor description has finished, you have two options to persist it. First you may *download* an XML file of the sensor description as SensorML document via the **Download Description** button. To publish the description within the connected SOS-instance use the **Publish Description** button. Both are located below the edit window. Note that you have to be logged in to see the button!
+Once the edit process of the sensor description has finished, you have two options to persist it. First you may *download* an XML file of the sensor description as SensorML document via the **Download Description** button. To publish the description within the connected **SOS**-instance use the **Publish Description** button. Both are located below the edit window. *Note that you have to be logged in to see the Publish button!*
 
 ![Actions for new Sensor Description](images/actions_for_sensorDescription.png)*Actions for new Sensor Description*
 
@@ -156,15 +156,19 @@ Once persisted within the **SOS**, you are still able to edit the document using
 
 ### Error Handling
 
-When trying to publish a SensorML document, the underlying **SOS** might respond with an error message in case the SensorML document does not conform to the requirements of the **SOS** and **SensorML** standards. An error message may have several reasons. To mention a few: - a needed element may not be specified - empty elements may not be allowed - provided property values do not pass validity checks.
+When trying to publish a SensorML document, the underlying **SOS** might respond with an error message in case the SensorML document does not conform to the requirements of the **SOS** and **SensorML** standards. An error message may have several reasons. To mention a few:
+
+- a needed element may not be specified
+- empty elements may not be allowed
+- provided property values do not pass validity checks.
 
 If the **SOS** rejects the SensorML document for whatever reason, **SMLE** displays the error message at the bottom of the publish view, according to the next figure.
 
 ![Publish - Add Description - Error Message from SOS Instance](images/create_from_Template_publish_view_add_description_error.png)*Publish - Add Description - Error Message from SOS Instance*
 
-Currently, the displayed error message is forwarded from the **SOS** instance and should indicate what kind of error occurs. Hopefully, the message contains a hint on how to edit the SensorML document to make it valid. In this case the error message notifies you of a missing required element called *linkage* within the higher-level element *CI_OnlineResource*. Sadly, there is no indication on where to find the latter. To troubleshoot the problem in worst case scenario, edit the document and inspect every hierarchy level to find the required element and provide a proper value for it. For instance, the created *Contact* element defines an element **Online Resource** with the property **Linkage**. So, navigate to *Contacts - Responsible Party - Contact (Contact Info) - Online Resource* to enter a suitable value, as shown in the following figure.
+Currently, the displayed error message is forwarded from the **SOS** instance and should indicate what kind of error occurs. Hopefully, the message contains a hint on how to edit the SensorML document to make it valid. In this case the error message notifies you of a missing required element called *linkage* within the higher-level element *CI_OnlineResource*. Sadly, there is no indication on where to find the latter. To troubleshoot the problem in worst case scenario, edit the document and inspect every hierarchy level to find the required element and provide a proper value for it. For instance, as we defined a *Contact* element previously, we should inspect it to see if we missed to enter the required information. Indeed, the created *Contact* element defines a sub element **Online Resource** that contains the property **Linkage**. So, navigate to *Contacts - Responsible Party - Contact (Contact Info) - Online Resource* to enter a suitable value, as shown in the following figure.
 
-![Enter required Information to eliminate Error and try to Publish the Description again](images/add_information/provide_online_resource_for_contact.png)*Enter required Information to eliminate Error and try to Publish the Description again*
+![Enter required Information to eliminate Error and try to Publish the Description again](images/add_information/provide_online_resource_for_contact.png)*Enter required Information to eliminate Error and try to publish the Description again*
 
 After that hit the **Publish Description** button again to open the publish view and add/update the new sensor description. If no other error occurs, the **SOS** will then save the transmitted document.
 
