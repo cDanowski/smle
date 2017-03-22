@@ -62,7 +62,7 @@ Create SensorML Document from Template
 
 The application allows to create a new sensor description based on an existing template that already fills parts of the SensorML structure. Select **Create from Template** from the navigation bar to open a new menu where you can browse and search for available SensorML templates provided by the [ESONET YELLOW PAGES](http://www.esonetyellowpages.com/). As of March 2017 380 templates are available that can be filtered through appropriate keywords. To browse all templates, simply hit the **Search** button without any keyword. To filter the templates, enter any keyword and hit the **Search** button. The following example shows all entries for the keyword *salinity*.
 
-![Create from Template - Filter Templates](images/create_from_template_filter.png)*Create from Template - Filter Templates*
+![Create from Template - Filter Templates](images/create_from_Template_filter.png)*Create from Template - Filter Templates*
 
 From the list of returned templates you may select the target template, which is used to create a new SensorML document. E.g. when selecting the template *Hydrolab Conductivity Sensor*, a description of the selected sensor as well as the option to **create a sensor description of this template** is provided. Optionally, you may already enter a new unique identifier for the new SensorML document, either manually or by clicking the **Create identifier** button, which generates a system-wide unique identifier. However, the identifier may be defined later as well.
 
