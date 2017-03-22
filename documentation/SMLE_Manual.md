@@ -50,7 +50,7 @@ After selecting a template (and providing a new identifier) you may click on the
 
 ![Create from Template - Instantiate Template](images/create_from_Template_fill_template.png)*Create from Template - Instantiate Template*
 
-The embedded frame characterizes the selected *Hydrolab Conductivity Sensor* as a **Physical System** offering appropriate editable properties for its sensor description. Other *description types / sensor types* are **Physical Component** and **Discovery Profile**, whose roles will be explained in section [Create new SensorML Document](#create-new-sensorml-document). The **edit view** provides editable fields within the mentioned embedded frame. By default, some descriptive properties (such as the field ***Description***) are hidden from the user. To show all editable properties, you have to check the respective ***Show all*** field located at the top of the frame. Via the ***Reset*** button on its right, all manual edits can be reset to their initial state.
+The embedded frame characterizes the selected *Hydrolab Conductivity Sensor* as a **Physical System** offering appropriate editable properties for its sensor description. Other *description types / sensor types* are **Physical Component** and **Discovery Profile**, whose roles will be explained in section [Create new SensorML Document](#create-new-sensorml-documents). The **edit view** provides editable fields within the mentioned embedded frame. By default, some descriptive properties (such as the field ***Description***) are hidden from the user. To show all editable properties, you have to check the respective ***Show all*** field located at the top of the frame. Via the ***Reset*** button on its right, all manual edits can be reset to their initial state.
 
 Concerning the editable fields, the embedded frame first contains an area with basic general properties such as ***GML ID*** or the ***Identifier***. If specified earlier, the ***Value*** property of ***Identifier*** stores the unique identifier, which can still be modified. Other thematically related properties are grouped by inner cyanish coloured collapsible elements. E.g. in the upper figure there are two collapsible sections visible, first the collapsed ***Keywords*** section and second the expanded ***Identification*** section. On expansion, they reveal editable properties.
 
@@ -142,13 +142,13 @@ Currently, the displayed error message is forwarded from the **SOS** instance an
 
 After that hit the **Publish Description** button again to open the publish view and add/update the new sensor description. If no other error occurs, the **SOS** will then save the transmitted document.
 
-Create new SensorML Document
-----------------------------
+Create new SensorML Documents
+-----------------------------
 
 In contrast to creating a new SensorML instance using a template, you are free to create a completely new document via the menu **New** from the navigation bar. As first step you are prompted to choose the *descriptionType* of the new document instance. Currently you can choose between *PhysicalSystem* for single sensor devices, *PhysicalComponent* for sensor components within a multisensor component-based setting and *DiscoveryProfile*. While the first two allow the definition of SensorML sensor descriptions in an arbitrary way (without many restrictions on elements and properties), the latter option *DiscoveryProfile* conforms to the [SensorML Profile for Discovery](http://portal.opengeospatial.org/files/?artifact_id=33284) as specified by the OGC. Its purpose is to apply a variety of restrictions regarding the existance and value ranges of SensorML elements and properties in the context of *discovery and harvesting services and mechanisms*. For this reason, the ***Discovery Profile*** declares mandatory elements as well as a prescribed structure of sensor descriptions.
 
 ```
-***TODO*** how does SMLE manage DiscoveryProfile descriptions. Doe it give hints to the user regharding missing elements or falsely entered values? 
+***TODO*** how does SMLE manage DiscoveryProfile descriptions. Doe it give hints to the user regharding missing elements or falsely entered values?
 ```
 
 ![Create New Description - Select Description Type](images/new_select_description_type.png)*Create New Description - Select Description Type*
@@ -166,17 +166,17 @@ View existing SensorML Descriptions
 
 To view existing sensor descriptions, you do not have to be logged in. Navigate to the menu **Edit/View** from the navigation bar to find a dropdown with the available SensorML documents.
 
-![View Description - Select SensorML Document](images/view_select_from_dropdown.png)
+![View Description - Select SensorML Document](images/view_select_from_dropdown.png)*View Description - Select SensorML Document*
 
-After selecting a certain document, **SMLE** provides you with a collapsed tree structure of the elements of the SensorML document, as shown in the subsequent figure.
+After selecting a certain document, **SMLE** provides you with a collapsed tree structure of the elements of the SensorML document, as shown in the subsequent figure. Each element of the description can be expanded to inspect its hierarchy and properties.
 
-![View Description - As Tree Structure](images/view_as_tree.png)
+![View Description - As Tree Structure](images/view_as_tree.png)*View Description - As Tree Structure*
 
-You can inspect each element with a leading horizontal arrow by clicking on it to reveal the next level of the tree structure. Leaf node values are marked using orange colour and surrounding quotes while attribute values are marked using blue colour. Alternatively, the XML equivalent of the SensorML document can be viewed by switching to the **as XML** tab.
+You can inspect each element with a leading horizontal arrow by clicking on it to reveal the next hierarchical element. Leaf node values are marked using orange colour and surrounding quotes while attribute values are marked using blue colour. Alternatively, the XML equivalent of the SensorML document can be viewed by switching to the **as XML** tab.
 
-![View Description - As XML Structure](images/view_as_xml.png)
+![View Description - As XML Structure](images/view_as_xml.png)*View Description - As XML Structure*
 
-Below both views you find two buttons **Edit sensor description** and **copy sensor description**. While the former allows you to edit the existing document (as identified by its unique ID) the latter creates a copy of the currently selected SensorML instance but removes its *unique identifier*, causing you to provide a new *identifier* within the edit view. Note that although you might not be logged in, you still see both buttons allowing you to switch to the corresponding views.
+Below both views you find two buttons **Edit sensor description** and **Copy sensor description**. While the former allows you to edit the existing document (as identified by its unique ID) the latter creates a copy of the currently selected SensorML instance but removes its *unique identifier*, causing you to provide a new *identifier* within the edit view. Note that although you might not be logged in, you still see both buttons allowing you to switch to the corresponding views.
 
 Edit your own SensorML Descriptions
 -----------------------------------
