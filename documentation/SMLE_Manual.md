@@ -94,35 +94,51 @@ Back on the hierarchy level *Classifier list* you should verify that the edited 
 
 As shown by this simple example, you should navigate through all pre-set values and edit them to the de facto values of the sensor for which you create the SensorML document. **SMLE** will **NOT inform** you about any property that still carries any *null* values. So you will have to carefully inspect each property by yourself. Should you wish to remove any property, you are free to do so. Basing on a template is up to your choice and only provides recommendations on how to model sensor descriptions using the SensorML standard. In theory, you are free to include the necessary information about your sensor using other properties/elements of SensorML. However, using templates and its recommended pre-set properties allows better comparability to descriptions of similar sensors.
 
-### Publish and persist new SensorML Document
+### Editable Sensor Characteristics
 
-After adding or overriding the necessary properties to reflect you sensor characteristics, click on the **Publish Description** button located below the edit window. Note that you have to be logged in to see the button! If you have not specified any *identifier* for the new document you are prompted to enter it now. Again, you may let the system generate a new identifier using the **Create identifier** button, as shown in the subsequent figure. Alternatively, enter a manual value.
+The following figure gives an overview of the main sections within a sensor description:
 
-![Create Identifier before Publishing](images/create_identifier_before_publishing.png)
+![Editable Sections of a Physical Sensor](images/list_of_editable_sections.png)*Editable Sections of a Physical Sensor*
 
-When publishing the document, **SMLE** will provide you with a final uneditable view of the XML structure of the new SensorML document for verification purposes. Here you should proofread all the edited properties/elements. When detecting an error or some other reason to return to the edit view, use the **Edit Description** button located above the XML view. If you are satisifed with the preview of the new SensorML document, you find a notification below the XML preview. **SMLE** contacts the **SOS** instance to check, whether the identifier of the new SensorML instance already exists within the **SOS**. If not, it informs you about this and offers you a button called **Add Description** to persist the created document within the **SOS**.
+This guide does not aim to give a detailed explanation of all SensorML components and which properties you can specifiy in each section. If you require information SensorML, please refer to the official [SensorML Specification of the OGC](http://www.opengeospatial.org/standards/sensorml).
 
-![Publish - Add Description](images/create_from_Template_publish_view_add_description.png)
+As you can see in the upper figure, in addition to properties concerning the sensor itself (e.g. *Input* and *Output* definitions or *Configuration* details), you may also specifiy **connections/attachements** to other components. E.g. by clicking on ***Change component connections*** below, you may specify a connection to an already defined other sensor description via its *Identifier*.
+
+### Publish and Persist new SensorML Document
+
+Once the edit process of the sensor description has finished, you have two options to persist it. First you may *download* an XML file of the sensor description as SensorML document via the **Download Description** button. To publish the description wihtin the connected SOS-instance use the **Publish Description** button. Both are located below the edit window. Note that you have to be logged in to see the button!
+
+![Actions for new Sensor Description](images/actions_for_sensorDescription.png)*Actions for new Sensor Description*
+
+Trying to publish your document, **SMLE** checks whether an *Identifier* has been specififed. If not, you are prompted to enter it now. Again, you may let the system generate a new identifier using the **Create identifier** button, as shown in the subsequent figure. Alternatively, enter a manual value.
+
+![Create Identifier before Publishing](images/create_identifier_before_publishing.png)*Create Identifier before Publishing (only prompted if Identifier was not specified earlier)*
+
+When publishing the document, **SMLE** will provide you with a final uneditable view of the XML structure of the new SensorML document for verification purposes. Here you should proofread all the edited properties/elements. When detecting an error or some other reason to return to the edit view, use the **Edit Description** button located above the XML view. If you are satisifed with the preview of the new SensorML document, you find a notification below the XML preview. **SMLE** contacts the **SOS** instance to check, whether the *Identifier* of the new SensorML instance already exists within the **SOS**. If not, it informs you about this and offers you a button called **Add Description** to persist the created document within the **SOS**.
+
+![Publish Description](images/create_from_Template_publish_view_add_description.png)*Publish Description*
 
 After clicking the button, you are notified whether the process was successful. (e.g. note the success message at the bottom of the following figure. Occurring errors are described in sub-section [Error Handling](#error-handling) below.)
 
-![Publish - Add Description - Success](images/create_from_Template_publish_view_add_description_success.png)
+![Publish Description - Success](images/create_from_Template_publish_view_add_description_success.png)*Publish Description - Success*
 
-Should the identifier already exist within the **SOS**, You are asked if you want to *update* the existing document using an **Update Description** button. Here you should carefully decide what to do. If you created a new SensoML instance for a new sensor, the *identifier* should be new as well. If you receive a notification that the *identifier* already exists, you should edit the document and alter the property.
+Should the *Identifier* already exist within the **SOS**, you are asked if you want to *update* the existing document using an **Update Description** button. Here you should carefully decide what to do. If you created a new SensoML instance for a new sensor, the *Identifier* should be new as well. If you receive a notification that the *Identifier* already exists, you should edit the document and alter the property.
 
-![Publish - Update Description](images/create_from_Template_publish_view_update_description.png)
+![Publish - Update Description](images/create_from_Template_publish_view_update_description.png)*Publish - Update Description*
 
 Once persisted within the **SOS**, you are still able to edit the document using the **Edit Description** button and re-publish the document. In this case the identifier should remain untouched to only *update* the existing document within the **SOS**.
 
 ### Error Handling
 
-When trying to publish a SensorML document, the underlying **SOS** might return with an error message in case the SensorML document does not conform to the requirements of the **SOS** and SensorML standard. An error message may have several reasons. To mention a few: a needed element may not be specified, empty elements may not be allowed or provided property values do not pass validity checks. If the **SOS** rejects the SensorML document for whatever reason, **SMLE** displays the error message at the bottom of the publish view, according to the next figure.
+When trying to publish a SensorML document, the underlying **SOS** might respond with an error message in case the SensorML document does not conform to the requirements of the **SOS** and **SensorML** standards. An error message may have several reasons. To mention a few: - a needed element may not be specified - empty elements may not be allowed - provided property values do not pass validity checks.
 
-![Publish - Add Description - Error](images/create_from_Template_publish_view_add_description_error.png)
+If the **SOS** rejects the SensorML document for whatever reason, **SMLE** displays the error message at the bottom of the publish view, according to the next figure.
 
-Currently, the displayed error message is forwarded from the **SOS** instance and should indicate what kind of error occurs. Hopefully, the message contains a hint on how to edit the SensorML document to make it valid. In this case the error message notifies you of a missing required element called *linkage* within the higher-level element *CI_OnlineResource*. Sadly, there is no indication on where to find the latter. To troubleshoot the problem in worst case scenario, edit the document and inspect every hierarchy level to find the required element and provide a proper value for it. For instance, the created *Contact* element defines an element **Online Resource** with the property **Linkage**. So, navigate to *Contact List - Responsible Party - Contact (Contact Info) - Online Resource* to enter a suitable value, as shown in the following figure.
+![Publish - Add Description - Error Message from SOS Instance](images/create_from_Template_publish_view_add_description_error.png)*Publish - Add Description - Error Message from SOS Instance*
 
-![Publish - Add Description](images/add_information/provide_online_resource_for_contact.png)
+Currently, the displayed error message is forwarded from the **SOS** instance and should indicate what kind of error occurs. Hopefully, the message contains a hint on how to edit the SensorML document to make it valid. In this case the error message notifies you of a missing required element called *linkage* within the higher-level element *CI_OnlineResource*. Sadly, there is no indication on where to find the latter. To troubleshoot the problem in worst case scenario, edit the document and inspect every hierarchy level to find the required element and provide a proper value for it. For instance, the created *Contact* element defines an element **Online Resource** with the property **Linkage**. So, navigate to *Contacs - Responsible Party - Contact (Contact Info) - Online Resource* to enter a suitable value, as shown in the following figure.
+
+![Enter required Information to eliminate Error and try to Publish the Description again](images/add_information/provide_online_resource_for_contact.png)*Enter required Information to eliminate Error and try to Publish the Description again*
 
 After that hit the **Publish Description** button again to open the publish view and add/update the new sensor description. If no other error occurs, the **SOS** will then save the transmitted document.
 
