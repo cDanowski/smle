@@ -74,7 +74,7 @@ After selecting a template (and providing a new identifier) you may click on the
 
 ![Create from Template - Instantiate Template](images/create_from_Template_fill_template.png)*Create from Template - Instantiate Template*
 
-The embedded frame characterizes the selected *Hydrolab Conductivity Sensor* as a **Physical System** offering appropriate editable properties for its sensor description. Other *description types / sensor types* are **Physical Component** and **Discovery Profile**, whose roles will be explained in section [Create new SensorML Document](#create-new-sensorml-documents). The **edit view** provides editable fields within the mentioned embedded frame. By default, some descriptive properties (such as the field ***Description***) are hidden from the user. To show all editable properties, you have to check the respective ***Show all*** field located at the top of the frame. Via the ***Reset*** button on its right, all manual edits can be reset to their initial state.
+The embedded frame characterizes the selected *Hydrolab Conductivity Sensor* as a **Physical System** offering appropriate editable properties for its sensor description. Another *description type / sensor type* is **Physical Component**, whose roles will be explained in section [Create new SensorML Document](#create-new-sensorml-documents). The **edit view** provides editable fields within the mentioned embedded frame. By default, some descriptive properties (such as the field ***Description***) are hidden from the user. To show all editable properties, you have to check the respective ***Show all*** field located at the top of the frame. Via the ***Reset*** button on its right, all manual edits can be reset to their initial state.
 
 Concerning the editable fields, the embedded frame first contains an area with basic general properties such as ***GML ID*** or the ***Identifier***. If specified earlier, the ***Value*** property of ***Identifier*** stores the unique identifier, which can still be modified. Other thematically related properties are grouped by inner cyanish coloured collapsible elements. E.g. in the upper figure there are two collapsible sections visible, first the collapsed ***Keywords*** section and second the expanded ***Identification*** section. On expansion, they reveal editable properties.
 
@@ -171,11 +171,7 @@ Create new SensorML Documents
 
 *You need to be logged in in order to publish a new SensorML description.*
 
-In contrast to creating a new SensorML instance using a template, you are free to create a completely new document via the menu **New** from the navigation bar. As first step you are prompted to choose the *descriptionType* of the new document instance. Currently you can choose between *PhysicalSystem* for single sensor devices, *PhysicalComponent* for sensor components within a multisensor component-based setting and *DiscoveryProfile*. While the first two allow the definition of SensorML sensor descriptions in an arbitrary way (without many restrictions on elements and properties), the latter option *DiscoveryProfile* conforms to the [SensorML Profile for Discovery](http://portal.opengeospatial.org/files/?artifact_id=33284) as specified by the OGC. Its purpose is to apply a variety of restrictions regarding the existance and value ranges of SensorML elements and properties in the context of *discovery and harvesting services and mechanisms*. For this reason, the ***Discovery Profile*** declares mandatory elements as well as a prescribed structure of sensor descriptions.
-
-```
-***TODO*** how does SMLE manage DiscoveryProfile descriptions. Doe it give hints to the user regharding missing elements or falsely entered values?
-```
+In contrast to creating a new SensorML instance using a template, you are free to create a completely new document via the menu **New** from the navigation bar. As first step you are prompted to choose the *descriptionType* of the new document instance. Currently you can choose between *PhysicalSystem* for single sensor devices and *PhysicalComponent* for sensor components within a multisensor component-based setting.
 
 ![Create New Description - Select Description Type](images/new_select_description_type.png)*Create New Description - Select Description Type*
 
