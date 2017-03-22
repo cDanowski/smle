@@ -3,6 +3,30 @@ SensorML Editor (*SMLE*) Manual
 
 This document provides helpful information on how to use the **SensorML Editor (*SMLE*\)** Web application provided by **52&deg;North**. It uses a tutorial-based manner to guide you through the basic functionalities. This documentation is based on the SMLE version from March 2017. The most current development of **SMLE** is available from the [official GitHub page of **SMLE**](https://github.com/52North/SMLE).
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [SensorML Editor (*SMLE*) Manual](#sensorml-editor-smle-manual)
+  - [Basic Visual Interface of *SMLE*](#basic-visual-interface-of-smle)
+  - [Modifiable Items and Restrictions](#modifiable-items-and-restrictions)
+  - [Create SensorML Document from Template](#create-sensorml-document-from-template)
+    - [Find and Select Template](#find-and-select-template)
+    - [Instantiate and Edit new SensorML Document based on selected Template](#instantiate-and-edit-new-sensorml-document-based-on-selected-template)
+    - [Preset Structure and Values of the Template](#preset-structure-and-values-of-the-template)
+    - [Editable Sensor Characteristics](#editable-sensor-characteristics)
+    - [Publish and Persist new SensorML Document](#publish-and-persist-new-sensorml-document)
+    - [Error Handling](#error-handling)
+  - [Create new SensorML Documents](#create-new-sensorml-documents)
+  - [View existing SensorML Descriptions](#view-existing-sensorml-descriptions)
+  - [Edit your own SensorML Descriptions](#edit-your-own-sensorml-descriptions)
+    - [Role of the unique Identifier](#role-of-the-unique-identifier)
+    - [Restriction to only edit your own Content](#restriction-to-only-edit-your-own-content)
+  - [Delete your own SensorML Descriptions](#delete-your-own-sensorml-descriptions)
+    - [Restriction to only delete your own Content](#restriction-to-only-delete-your-own-content)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Basic Visual Interface of *SMLE*
 --------------------------------
 
