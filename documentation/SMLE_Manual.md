@@ -76,11 +76,11 @@ After selecting a template (and providing a new identifier) you may click on the
 
 The embedded frame characterizes the selected *Hydrolab Conductivity Sensor* as a **Physical System** offering appropriate editable properties for its sensor description. Another *description type / sensor type* is **Physical Component**, whose roles will be explained in section [Create new SensorML Document](#create-new-sensorml-documents). The **edit view** provides editable fields within the mentioned embedded frame. By default, some descriptive properties (such as the field ***Description***) are hidden from the user. To show all editable properties, you have to check the respective ***Show all*** field located at the top of the frame. Via the ***Reset*** button on its right, all manual edits can be reset to their initial state.
 
-Concerning the editable fields, the embedded frame first contains an area with basic general properties such as ***GML ID*** or the ***Identifier***. If specified earlier, the ***Value*** property of ***Identifier*** stores the unique identifier, which can still be modified. Other thematically related properties are grouped by inner cyanish coloured collapsible elements. E.g. in the upper figure there are two collapsible sections visible, first the collapsed ***Keywords*** section and second the expanded ***Identification*** section. On expansion, they reveal editable properties.
+Concerning the editable fields, the embedded frame first contains an area with basic general properties such as ***GML ID*** or the ***Identifier***. If specified earlier, the ***Value*** property of ***Identifier*** stores the unique identifier, which can still be modified. Other thematically related properties are grouped by inner cyanic coloured collapsible elements. E.g. in the upper figure there are two collapsible sections visible, first the collapsed ***Keywords*** section and second the expanded ***Identification*** section. On expansion, they reveal editable properties.
 
 The process of adding new information uses a nested window design to resemble the hierarchy of the added item. As an example, the subsequent series of figures shows how to add *contact information*. Notice how with each new hierarchy level a new nested window appears, where you can add/enter new information. To close a nested windows, you may either use the **Close** button on the top right of the window or click on the vertically oriented name of a previous hierarchy element on the left.
 
-1.	Navigate to the **Contacts** collapsible of the SensorML document and expand it. Click on the **create element** button, which creates a new *Contacs* element. ![Create from Template - Edit Properties - Click on 'create element' in 'Contacts' Section](images/add_information/contacts_click_createElement.png)*Create from Template - Edit Properties - Click on 'create element' in 'Contacts' Section*
+1.	Navigate to the **Contacts** collapsible of the SensorML document and expand it. Click on the **create element** button, which creates a new *Contacts* element. ![Create from Template - Edit Properties - Click on 'create element' in 'Contacts' Section](images/add_information/contacts_click_createElement.png)*Create from Template - Edit Properties - Click on 'create element' in 'Contacts' Section*
 
 2.	The creation of the new **Contacts** element reveals a new **Add** button. Click it to *add* the next hierarchy level of the **Contacts** element, in this case the item *Responsible party*. ![Create from Template - Edit Properties - Click on 'Add' in 'Contacts' Element](images/add_information/contacts_click_add.png)*Create from Template - Edit Properties - Click on 'Add' in 'Contacts' Element*
 
@@ -124,21 +124,21 @@ The following figure gives an overview of the main sections within a sensor desc
 
 ![Editable Sections of a Physical Sensor](images/list_of_editable_sections.png)*Editable Sections of a Physical Sensor*
 
-This guide does not aim to give a detailed explanation of all SensorML components and which properties you can specifiy in each section. If you require information SensorML, please refer to the official [SensorML Specification of the OGC](http://www.opengeospatial.org/standards/sensorml).
+This guide does not aim to give a detailed explanation of all SensorML components and which properties you can specify in each section. If you require information SensorML, please refer to the official [SensorML Specification of the OGC](http://www.opengeospatial.org/standards/sensorml).
 
-As you can see in the upper figure, in addition to properties concerning the sensor itself (e.g. *Input* and *Output* definitions or *Configuration* details), you may also specifiy **connections/attachements** to other components. E.g. by clicking on ***Change component connections*** below, you may specify a connection to an already defined other sensor description via its *Identifier*.
+As you can see in the upper figure, in addition to properties concerning the sensor itself (e.g. *Input* and *Output* definitions or *Configuration* details), you may also specify **connections/attachments** to other components. E.g. by clicking on ***Change component connections*** below, you may specify a connection to an already defined other sensor description via its *Identifier*.
 
 ### Publish and Persist new SensorML Document
 
-Once the edit process of the sensor description has finished, you have two options to persist it. First you may *download* an XML file of the sensor description as SensorML document via the **Download Description** button. To publish the description wihtin the connected SOS-instance use the **Publish Description** button. Both are located below the edit window. Note that you have to be logged in to see the button!
+Once the edit process of the sensor description has finished, you have two options to persist it. First you may *download* an XML file of the sensor description as SensorML document via the **Download Description** button. To publish the description within the connected SOS-instance use the **Publish Description** button. Both are located below the edit window. Note that you have to be logged in to see the button!
 
 ![Actions for new Sensor Description](images/actions_for_sensorDescription.png)*Actions for new Sensor Description*
 
-Trying to publish your document, **SMLE** checks whether an *Identifier* has been specififed. If not, you are prompted to enter it now. Again, you may let the system generate a new identifier using the **Create identifier** button, as shown in the subsequent figure. Alternatively, enter a manual value.
+Trying to publish your document, **SMLE** checks whether an *Identifier* has been specified. If not, you are prompted to enter it now. Again, you may let the system generate a new identifier using the **Create identifier** button, as shown in the subsequent figure. Alternatively, enter a manual value.
 
 ![Create Identifier before Publishing](images/create_identifier_before_publishing.png)*Create Identifier before Publishing (only prompted if Identifier was not specified earlier)*
 
-When publishing the document, **SMLE** will provide you with a final uneditable view of the XML structure of the new SensorML document for verification purposes. Here you should proofread all the edited properties/elements. When detecting an error or some other reason to return to the edit view, use the **Edit Description** button located above the XML view. If you are satisifed with the preview of the new SensorML document, you find a notification below the XML preview. **SMLE** contacts the **SOS** instance to check, whether the *Identifier* of the new SensorML instance already exists within the **SOS**. If not, it informs you about this and offers you a button called **Add Description** to persist the created document within the **SOS**.
+When publishing the document, **SMLE** will provide you with a final not editable view of the XML structure of the new SensorML document for verification purposes. Here you should proofread all the edited properties/elements. When detecting an error or some other reason to return to the edit view, use the **Edit Description** button located above the XML view. If you are satisfied with the preview of the new SensorML document, you find a notification below the XML preview. **SMLE** contacts the **SOS** instance to check, whether the *Identifier* of the new SensorML instance already exists within the **SOS**. If not, it informs you about this and offers you a button called **Add Description** to persist the created document within the **SOS**.
 
 ![Publish Description](images/create_from_Template_publish_view_add_description.png)*Publish Description*
 
@@ -146,7 +146,7 @@ After clicking the button, you are notified whether the process was successful. 
 
 ![Publish Description - Success](images/create_from_Template_publish_view_add_description_success.png)*Publish Description - Success*
 
-Should the *Identifier* already exist within the **SOS**, you are asked if you want to *update* the existing document using an **Update Description** button. Here you should carefully decide what to do. If you created a new SensoML instance for a new sensor, the *Identifier* should be new as well. If you receive a notification that the *Identifier* already exists, you should edit the document and alter the property.
+Should the *Identifier* already exist within the **SOS**, you are asked if you want to *update* the existing document using an **Update Description** button. Here you should carefully decide what to do. If you created a new SensorML instance for a new sensor, the *Identifier* should be new as well. If you receive a notification that the *Identifier* already exists, you should edit the document and alter the property.
 
 ![Publish - Update Description](images/create_from_Template_publish_view_update_description.png)*Publish - Update Description*
 
@@ -160,7 +160,7 @@ If the **SOS** rejects the SensorML document for whatever reason, **SMLE** displ
 
 ![Publish - Add Description - Error Message from SOS Instance](images/create_from_Template_publish_view_add_description_error.png)*Publish - Add Description - Error Message from SOS Instance*
 
-Currently, the displayed error message is forwarded from the **SOS** instance and should indicate what kind of error occurs. Hopefully, the message contains a hint on how to edit the SensorML document to make it valid. In this case the error message notifies you of a missing required element called *linkage* within the higher-level element *CI_OnlineResource*. Sadly, there is no indication on where to find the latter. To troubleshoot the problem in worst case scenario, edit the document and inspect every hierarchy level to find the required element and provide a proper value for it. For instance, the created *Contact* element defines an element **Online Resource** with the property **Linkage**. So, navigate to *Contacs - Responsible Party - Contact (Contact Info) - Online Resource* to enter a suitable value, as shown in the following figure.
+Currently, the displayed error message is forwarded from the **SOS** instance and should indicate what kind of error occurs. Hopefully, the message contains a hint on how to edit the SensorML document to make it valid. In this case the error message notifies you of a missing required element called *linkage* within the higher-level element *CI_OnlineResource*. Sadly, there is no indication on where to find the latter. To troubleshoot the problem in worst case scenario, edit the document and inspect every hierarchy level to find the required element and provide a proper value for it. For instance, the created *Contact* element defines an element **Online Resource** with the property **Linkage**. So, navigate to *Contacts - Responsible Party - Contact (Contact Info) - Online Resource* to enter a suitable value, as shown in the following figure.
 
 ![Enter required Information to eliminate Error and try to Publish the Description again](images/add_information/provide_online_resource_for_contact.png)*Enter required Information to eliminate Error and try to Publish the Description again*
 
@@ -171,7 +171,7 @@ Create new SensorML Documents
 
 *You need to be logged in in order to publish a new SensorML description.*
 
-In contrast to creating a new SensorML instance using a template, you are free to create a completely new document via the menu **New** from the navigation bar. As first step you are prompted to choose the *descriptionType* of the new document instance. Currently you can choose between *PhysicalSystem* for single sensor devices and *PhysicalComponent* for sensor components within a multisensor component-based setting.
+In contrast to creating a new SensorML instance using a template, you are free to create a completely new document via the menu **New** from the navigation bar. As first step you are prompted to choose the *descriptionType* of the new document instance. Currently you can choose between *PhysicalSystem* for single sensor devices and *PhysicalComponent* for sensor components within a multi-sensor component-based setting.
 
 ![Create New Description - Select Description Type](images/new_select_description_type.png)*Create New Description - Select Description Type*
 
@@ -213,7 +213,7 @@ Each stored SensorML document stored in the **SOS** is referenced by its unique 
 
 ### Restriction to only edit your own Content
 
-You are enabled to view and edit any available SensorML document of the underlying **SOS**. However, when trying to re-publish/update a modified SensorML document, which is not linked to your account, **SMLE** will inform you that you miss the appropriate permission, as the underlying **SOS** rejects the the associated **UpdateSensorDescription request** from the non-authorized user.
+You are enabled to view and edit any available SensorML document of the underlying **SOS**. However, when trying to re-publish/update a modified SensorML document, which is not linked to your account, **SMLE** will inform you that you miss the appropriate permission, as the underlying **SOS** rejects the associated **UpdateSensorDescription request** from the non-authorized user.
 
 ![Updating a document of another user fails due to missing permission](images/update_fail_no_permission.png)*Updating a document of another user fails due to missing permission*
 
